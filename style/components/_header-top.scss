@@ -1,0 +1,124 @@
+.header {
+    width: 100%;
+
+    &-top {
+        @include flexbetween;
+        margin-top: 40px;
+
+        @include media(768) {
+            margin-top: 20px;
+        }
+
+        &_section {
+            max-width: 700px;
+            width: 100%;
+            display: flex;
+            column-gap: 160px;
+
+            @include media(1120) {
+                column-gap: 80px;
+            }
+
+            @include media(984) {
+                column-gap: 15px;
+            }
+
+            &__menu {
+                display: flex;
+                column-gap: 40px;
+
+                @include media(984) {
+                    column-gap: 20px;
+                }
+
+                @include media(768) {
+                    display: none;
+                }
+
+                &-link {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 27px;
+                    color: #2C3847;
+                    transition: .3s;
+                }
+
+                @include media(984) {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+
+                &-link:hover {
+                    color: #5FB848;
+                }
+            }
+        }
+
+        &_order {
+            display: flex;
+            width: 100%;
+            justify-content: end;
+            gap: 20px;
+
+            @include media(768) {
+                display: none;
+            }
+
+            &__search-img,
+            &__cart-img {
+                cursor: pointer;
+            }
+
+            &-button {
+                margin-left: 10px;
+                padding: 14px 30px;
+                background: #494949;
+                border-radius: 27px;
+                border: 1px solid #494949;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 27px;
+                text-align: center;
+                color: #FFFFFF;
+                transition: .3s;
+
+                @include media(984) {
+                    font-size: 16px;
+                }
+            }
+
+            &-button:hover {
+                background-color: #FFFFFF;
+                color: #494949;
+            }
+        }
+
+        &_burgerMenu {
+            display: none;
+            flex-direction: column;
+            gap: 7px;
+            cursor: pointer;
+
+            @include media(768) {
+                display: flex;
+            }
+
+            &__top,
+            &__bottom {
+                width: 35px;
+                height: 4px;
+                background-color: #494949;
+                border-radius: 50px;
+            }
+
+            &__between {
+                display: flex;
+                margin-left: 10px;
+                width: 25px;
+                height: 4px;
+                background-color: #494949;
+                border-radius: 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+// General Styles
+
+@import "./style/variables/normalize";
+@import "./style/variables/mixins";
+@import "./style/variables/variable";
+@import "./style/variables/fonts";
+@import "./style/variables/media-mixin";
+
+// Components
+
+@import "./style/components/header-top";
+@import "./style/components/mobile-menu";
