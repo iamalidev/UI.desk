@@ -109,6 +109,15 @@
                 height: 4px;
                 background-color: #494949;
                 border-radius: 50px;
+                transition: .5s;
+            }
+
+            &__top.rotate {
+                transform: translateY(11px) rotate(405deg);
+            }
+
+            &__bottom.rotate {
+                transform: translateY(-11px) rotate(-405deg);
             }
 
             &__between {
@@ -118,6 +127,13 @@
                 height: 4px;
                 background-color: #494949;
                 border-radius: 50px;
+                transition: .3s;
+                transform: scaleX(1);
+            }
+
+            &__between.hide {
+                transform: scaleX(0);
+                background-color: #FFFFFF;
             }
         }
     }

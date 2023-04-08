@@ -149,6 +149,13 @@ body {
   height: 4px;
   background-color: #494949;
   border-radius: 50px;
+  transition: 0.5s;
+}
+.header-top_burgerMenu__top.rotate {
+  transform: translateY(11px) rotate(405deg);
+}
+.header-top_burgerMenu__bottom.rotate {
+  transform: translateY(-11px) rotate(-405deg);
 }
 .header-top_burgerMenu__between {
   display: flex;
@@ -157,20 +164,68 @@ body {
   height: 4px;
   background-color: #494949;
   border-radius: 50px;
+  transition: 0.3s;
+  transform: scaleX(1);
+}
+.header-top_burgerMenu__between.hide {
+  transform: scaleX(0);
+  background-color: #FFFFFF;
 }
 
-.mobileMenu {
+.mobile-menu {
   max-width: 384px;
   width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
-  background-color: #fff;
-  border-right: 1px solid #000;
+  background-color: #ffffff;
+  box-shadow: -15px 0 150px #e0e0e0, 10px 20px 150px rgba(0, 0, 0, 0.08);
   border-radius: 0 20px 20px 0;
   transition: 0.3s;
   transform: translateX(-384px);
 }
-.mobileMenu.open {
+.mobile-menu_top {
+  margin-top: 20px;
+}
+.mobile-menu_top__logo {
+  width: 124px;
+  height: 69px;
+  margin-left: 20px;
+}
+.mobile-menu_body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 70px 0 0 30px;
+}
+.mobile-menu_body__link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #2C3847;
+  display: flex;
+  color: #5FB848;
+}
+.mobile-menu_body__link-aboutus, .mobile-menu_body__link-contact {
+  width: 15px;
+  height: 20px;
+  margin-right: 20px;
+}
+.mobile-menu_body__link-search, .mobile-menu_body__link-cart, .mobile-menu_body__link-logout, .mobile-menu_body__link-testimonials, .mobile-menu_body__link-home {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.mobile-menu_footer {
+  display: flex;
+  gap: 20px;
+  margin-top: 300px;
+  padding-left: 30px;
+}
+.mobile-menu_footer__telegram, .mobile-menu_footer__facebook, .mobile-menu_footer__twitter, .mobile-menu_footer__instagram {
+  width: 30px;
+  height: 30px;
+}
+.mobile-menu.open {
   transform: translateX(0);
 }/*# sourceMappingURL=main.css.map */

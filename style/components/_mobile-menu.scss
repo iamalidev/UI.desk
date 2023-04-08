@@ -1,14 +1,72 @@
-.mobileMenu {
+.mobile-menu {
     max-width: 384px;
     width: 100%;
     height: 100vh;
     position: fixed;
     top: 0;
-    background-color: #fff;
-    border-right: 1px solid #000;
+    background-color: #ffffff;
+    box-shadow: -15px 0 150px #e0e0e0, 10px 20px 150px rgba(0, 0, 0, 0.08);
     border-radius: 0 20px 20px 0;
     transition: 0.3s;
     transform: translateX(-384px);
+
+    &_top {
+        margin-top: 20px;
+
+        &__logo {
+            width: 124px;
+            height: 69px;
+            margin-left: 20px;
+        }
+    }
+
+    &_body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 70px 0 0 30px;
+
+        &__link {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: #2C3847;
+            display: flex;
+            color: $green;
+
+            &-aboutus,
+            &-contact {
+                width: 15px;
+                height: 20px;
+                margin-right: 20px;
+            }
+
+            &-search,
+            &-cart,
+            &-logout,
+            &-testimonials,
+            &-home {
+                width: 20px;
+                height: 20px;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &_footer {
+        display: flex;
+        gap: 20px;
+        margin-top: 300px;
+        padding-left: 30px;
+
+        &__telegram,
+        &__facebook,
+        &__twitter,
+        &__instagram {
+            width: 30px;
+            height: 30px;
+        }
+    }
 
     &.open {
         transform: translateX(0);
