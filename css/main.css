@@ -149,7 +149,7 @@ body {
   height: 4px;
   background-color: #494949;
   border-radius: 50px;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 .header-top_burgerMenu__top.rotate {
   transform: translateY(11px) rotate(405deg);
@@ -164,7 +164,7 @@ body {
   height: 4px;
   background-color: #494949;
   border-radius: 50px;
-  transition: 0.3s;
+  transition: 0.4s;
   transform: scaleX(1);
 }
 .header-top_burgerMenu__between.hide {
@@ -184,19 +184,36 @@ body {
   transition: 0.3s;
   transform: translateX(-384px);
 }
+@media only screen and (max-width: 450px) {
+  .mobile-menu {
+    max-width: 250px;
+  }
+}
 .mobile-menu_top {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .mobile-menu_top__logo {
   width: 124px;
   height: 69px;
   margin-left: 20px;
 }
+@media only screen and (max-width: 450px) {
+  .mobile-menu_top__logo {
+    width: 93px;
+    height: 51px;
+  }
+}
 .mobile-menu_body {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   margin: 70px 0 0 30px;
+}
+@media only screen and (max-width: 450px) {
+  .mobile-menu_body {
+    gap: 15px;
+    margin: 70px 0 0 30px;
+  }
 }
 .mobile-menu_body__link {
   font-weight: 400;
@@ -206,21 +223,52 @@ body {
   display: flex;
   color: #5FB848;
 }
+@media only screen and (max-width: 450px) {
+  .mobile-menu_body__link {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
 .mobile-menu_body__link-aboutus, .mobile-menu_body__link-contact {
   width: 15px;
   height: 20px;
   margin-right: 20px;
+}
+@media only screen and (max-width: 450px) {
+  .mobile-menu_body__link-contact, .mobile-menu_body__link-aboutus {
+    margin-right: 22px;
+  }
 }
 .mobile-menu_body__link-search, .mobile-menu_body__link-cart, .mobile-menu_body__link-logout, .mobile-menu_body__link-testimonials, .mobile-menu_body__link-home {
   width: 20px;
   height: 20px;
   margin-right: 20px;
 }
+@media only screen and (max-width: 450px) {
+  .mobile-menu_body__link-testimonials {
+    margin-right: 18px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .mobile-menu_body__link-logout {
+    margin-right: 22px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .mobile-menu_body__link-home {
+    margin-right: 17px;
+  }
+}
 .mobile-menu_footer {
   display: flex;
   gap: 20px;
   margin-top: 300px;
   padding-left: 30px;
+}
+@media only screen and (max-width: 450px) {
+  .mobile-menu_footer {
+    margin-top: 100px;
+  }
 }
 .mobile-menu_footer__telegram, .mobile-menu_footer__facebook, .mobile-menu_footer__twitter, .mobile-menu_footer__instagram {
   width: 30px;

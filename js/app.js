@@ -21,7 +21,3 @@ burger.addEventListener("click", () => {
 burger.addEventListener("click", () => {
     burgerBottom.classList.toggle("rotate");
 });
-
-burger.addEventListener("click", () => {
-    burger.classList.toggle("active");
-});
