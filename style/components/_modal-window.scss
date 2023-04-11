@@ -1,0 +1,166 @@
+.modal {
+    width: 600px;
+    height: 500px;
+    background-color: #e1f2e1;
+    position: absolute;
+    z-index: 2;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    box-shadow: 0 0 100px #c9c9c9, 10px 20px 150px rgba(255, 255, 255, 0.08);
+    transition: .7s;
+
+    @include media(600) {
+        width: 400px;
+        height: 300px;
+    }
+
+    &.open {
+        top: 20%;
+        position: fixed;
+    }
+
+    &-top {
+        padding: 25px;
+        border-bottom: 2px solid #fff;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 185px;
+
+        @include media(600) {
+            padding: 10px;
+            border-bottom: 2px solid #fff;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 115px;
+        }
+
+        &_title {
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 27px;
+            color: #2C3847;
+
+            @include media(600) {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 27px;
+                color: #2C3847;
+            }
+        }
+
+        &_closebtn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: .5s;
+
+            &-top,
+            &-bottom {
+                width: 20px;
+                height: 2px;
+                background-color: #494949;
+                border-radius: 5px;
+                transition: .4s;
+            }
+
+            &-top {
+                rotate: 45deg;
+                position: absolute;
+            }
+
+            &-bottom {
+                rotate: -45deg;
+            }
+
+            &:hover {
+                rotate: 360deg;
+            }
+        }
+    }
+
+    &-between {
+        padding: 2px;
+        margin-block: 10px;
+
+        &_email,
+        &_password {
+            border: none;
+            max-width: 500px;
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            padding: 20px;
+            transition: .3s;
+
+            @include media(600) {
+                max-width: 300px;
+                height: 30px;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 5px 10px 10px #b6b6b6, 10px 20px 150px rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        &_signup {
+            max-width: 500px;
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            background-color: #2C3847;
+            cursor: pointer;
+            color: #fff;
+            transition: 0.3s;
+
+            @include media(600) {
+                max-width: 300px;
+                height: 40px;
+            }
+
+            &:hover {
+                box-shadow: 5px 10px 10px #b6b6b6, 10px 20px 150px rgba(0, 0, 0, 0.08);
+                background-color: $green;
+                color: #fff;
+            }
+        }
+
+        .register {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+
+            @include media(600) {
+                gap: 15px;
+            }
+        }
+    }
+
+    &-bottom {
+        padding: 30px;
+        border-top: 2px solid #fff;
+
+        @include media(600) {
+            padding: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #2C3847;
+        }
+
+        &_text {
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}

@@ -54,6 +54,8 @@
                 line-height: 23px;
             }
 
+
+
             &-aboutus,
             &-contact {
                 width: 15px;
@@ -96,6 +98,20 @@
                 }
             }
         }
+
+        &__btn {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            margin-top: 330px;
+            border: none;
+            border-radius: 15px;
+            background-color: #494949;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            color: #FFFFFF;
+        }
     }
 
     &_footer {
@@ -114,10 +130,17 @@
         &__instagram {
             width: 30px;
             height: 30px;
+
+            @include media(450) {
+                width: 20px;
+                height: 20px;
+                margin-top: 100px;
+            }
         }
     }
 
     &.open {
         transform: translateX(0);
+        position: absolute;
     }
 }

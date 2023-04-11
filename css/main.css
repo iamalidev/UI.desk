@@ -10,6 +10,19 @@ body {
   font-family: "Poppins";
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5FB848;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #209e00;
+}
+
 .container {
   max-width: 1330px;
   width: 100%;
@@ -272,6 +285,19 @@ body {
     margin-right: 17px;
   }
 }
+.mobile-menu_body__btn {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  margin-top: 330px;
+  border: none;
+  border-radius: 15px;
+  background-color: #494949;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
 .mobile-menu_footer {
   display: flex;
   gap: 20px;
@@ -287,6 +313,170 @@ body {
   width: 30px;
   height: 30px;
 }
+@media only screen and (max-width: 450px) {
+  .mobile-menu_footer__telegram, .mobile-menu_footer__facebook, .mobile-menu_footer__twitter, .mobile-menu_footer__instagram {
+    width: 20px;
+    height: 20px;
+    margin-top: 100px;
+  }
+}
 .mobile-menu.open {
   transform: translateX(0);
+  position: absolute;
+}
+
+.modal {
+  width: 600px;
+  height: 500px;
+  background-color: #e1f2e1;
+  position: absolute;
+  z-index: 2;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  box-shadow: 0 0 100px #c9c9c9, 10px 20px 150px rgba(255, 255, 255, 0.08);
+  transition: 0.7s;
+}
+@media only screen and (max-width: 600px) {
+  .modal {
+    width: 400px;
+    height: 300px;
+  }
+}
+.modal.open {
+  top: 20%;
+  position: fixed;
+}
+.modal-top {
+  padding: 25px;
+  border-bottom: 2px solid #fff;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 185px;
+}
+@media only screen and (max-width: 600px) {
+  .modal-top {
+    padding: 10px;
+    border-bottom: 2px solid #fff;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 115px;
+  }
+}
+.modal-top_title {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 27px;
+  color: #2C3847;
+}
+@media only screen and (max-width: 600px) {
+  .modal-top_title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: #2C3847;
+  }
+}
+.modal-top_closebtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.modal-top_closebtn-top, .modal-top_closebtn-bottom {
+  width: 20px;
+  height: 2px;
+  background-color: #494949;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+.modal-top_closebtn-top {
+  rotate: 45deg;
+  position: absolute;
+}
+.modal-top_closebtn-bottom {
+  rotate: -45deg;
+}
+.modal-top_closebtn:hover {
+  rotate: 360deg;
+}
+.modal-between {
+  padding: 2px;
+  margin-block: 10px;
+}
+.modal-between_email, .modal-between_password {
+  border: none;
+  max-width: 500px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+@media only screen and (max-width: 600px) {
+  .modal-between_email, .modal-between_password {
+    max-width: 300px;
+    height: 30px;
+  }
+}
+.modal-between_email:focus, .modal-between_password:focus {
+  outline: none;
+  box-shadow: 5px 10px 10px #b6b6b6, 10px 20px 150px rgba(0, 0, 0, 0.08);
+}
+.modal-between_signup {
+  max-width: 500px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2C3847;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+@media only screen and (max-width: 600px) {
+  .modal-between_signup {
+    max-width: 300px;
+    height: 40px;
+  }
+}
+.modal-between_signup:hover {
+  box-shadow: 5px 10px 10px #b6b6b6, 10px 20px 150px rgba(0, 0, 0, 0.08);
+  background-color: #5FB848;
+  color: #fff;
+}
+.modal-between .register {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .modal-between .register {
+    gap: 15px;
+  }
+}
+.modal-bottom {
+  padding: 30px;
+  border-top: 2px solid #fff;
+}
+@media only screen and (max-width: 600px) {
+  .modal-bottom {
+    padding: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2C3847;
+  }
+}
+.modal-bottom_text {
+  text-align: center;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

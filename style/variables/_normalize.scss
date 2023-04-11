@@ -10,6 +10,19 @@ body {
     font-family: "Poppins";
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5FB848;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #209e00;
+}
+
 .container {
     max-width: 1330px;
     width: 100%;
