@@ -8,7 +8,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 30px;
-    box-shadow: 0 0 100px #c9c9c9, 10px 20px 150px rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 100px #dfdfdf, 10px 20px 150px rgba(255, 255, 255, 0.08);
     transition: .7s;
 
     @include media(600) {
@@ -87,8 +87,8 @@
     }
 
     &-between {
-        padding: 2px;
-        margin-block: 10px;
+        padding: 20px;
+        margin-block: 35px;
 
         &_email,
         &_password {
@@ -99,11 +99,6 @@
             border-radius: 10px;
             padding: 20px;
             transition: .3s;
-
-            @include media(600) {
-                max-width: 300px;
-                height: 30px;
-            }
 
             &:focus {
                 outline: none;
@@ -122,11 +117,6 @@
             color: #fff;
             transition: 0.3s;
 
-            @include media(600) {
-                max-width: 300px;
-                height: 40px;
-            }
-
             &:hover {
                 box-shadow: 5px 10px 10px #b6b6b6, 10px 20px 150px rgba(0, 0, 0, 0.08);
                 background-color: $green;
@@ -140,23 +130,12 @@
             gap: 30px;
             align-items: center;
 
-            @include media(600) {
-                gap: 15px;
-            }
         }
     }
 
     &-bottom {
         padding: 30px;
         border-top: 2px solid #fff;
-
-        @include media(600) {
-            padding: 20px;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 17px;
-            color: #2C3847;
-        }
 
         &_text {
             text-align: center;

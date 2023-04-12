@@ -1,0 +1,37 @@
+.header {
+    &-banner {
+        @include flexbetween;
+
+        &_texts {
+            max-width: 575px;
+            width: 100%;
+
+            &-title {
+                font-weight: 700;
+                font-size: 76px;
+                line-height: 95px;
+                color: #181D19;
+
+                &_span {
+                    color: #5FB848;
+                }
+            }
+        }
+
+        &_img {
+            display: flex;
+            max-width: 700px;
+            width: 100%;
+
+            &-foods {
+                
+            }
+
+            &-leaves {
+                position: absolute;
+                max-width: 700px;
+                width: 100%;
+            }
+        }
+    }
+}

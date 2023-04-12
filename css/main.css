@@ -325,6 +325,35 @@ body {
   position: absolute;
 }
 
+.header-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-banner_texts {
+  max-width: 575px;
+  width: 100%;
+}
+.header-banner_texts-title {
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 95px;
+  color: #181D19;
+}
+.header-banner_texts-title_span {
+  color: #5FB848;
+}
+.header-banner_img {
+  display: flex;
+  max-width: 700px;
+  width: 100%;
+}
+.header-banner_img-leaves {
+  position: absolute;
+  max-width: 700px;
+  width: 100%;
+}
+
 .modal {
   width: 600px;
   height: 500px;
@@ -335,7 +364,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 30px;
-  box-shadow: 0 0 100px #c9c9c9, 10px 20px 150px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 100px #dfdfdf, 10px 20px 150px rgba(255, 255, 255, 0.08);
   transition: 0.7s;
 }
 @media only screen and (max-width: 600px) {
@@ -408,8 +437,8 @@ body {
   rotate: 360deg;
 }
 .modal-between {
-  padding: 2px;
-  margin-block: 10px;
+  padding: 20px;
+  margin-block: 35px;
 }
 .modal-between_email, .modal-between_password {
   border: none;
@@ -419,12 +448,6 @@ body {
   border-radius: 10px;
   padding: 20px;
   transition: 0.3s;
-}
-@media only screen and (max-width: 600px) {
-  .modal-between_email, .modal-between_password {
-    max-width: 300px;
-    height: 30px;
-  }
 }
 .modal-between_email:focus, .modal-between_password:focus {
   outline: none;
@@ -441,12 +464,6 @@ body {
   color: #fff;
   transition: 0.3s;
 }
-@media only screen and (max-width: 600px) {
-  .modal-between_signup {
-    max-width: 300px;
-    height: 40px;
-  }
-}
 .modal-between_signup:hover {
   box-shadow: 5px 10px 10px #b6b6b6, 10px 20px 150px rgba(0, 0, 0, 0.08);
   background-color: #5FB848;
@@ -458,23 +475,9 @@ body {
   gap: 30px;
   align-items: center;
 }
-@media only screen and (max-width: 600px) {
-  .modal-between .register {
-    gap: 15px;
-  }
-}
 .modal-bottom {
   padding: 30px;
   border-top: 2px solid #fff;
-}
-@media only screen and (max-width: 600px) {
-  .modal-bottom {
-    padding: 20px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #2C3847;
-  }
 }
 .modal-bottom_text {
   text-align: center;
