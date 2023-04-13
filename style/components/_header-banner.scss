@@ -2,35 +2,176 @@
     &-banner {
         @include flexbetween;
 
+        @include media(1300) {
+            justify-content: center;
+            display: flex;
+            gap: 30px;
+        }
+
+        @include media(800) {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: 30px;
+        }
+
         &_texts {
-            max-width: 575px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 555px;
             width: 100%;
+            height: 530px;
+
+            @include media(1300) {
+                justify-content: center;
+                gap: 20px;
+                max-width: 340px;
+                height: 370px;
+            }
+
+            @include media(1000) {
+                max-width: 330px;
+                height: 280px;
+                gap: 20px;
+            }
+
+            @include media(800) {
+                // max-width: 330px;
+                width: 100%;
+                height: 280px;
+                gap: 15px;
+            }
 
             &-title {
-                font-weight: 700;
-                font-size: 76px;
-                line-height: 95px;
+                max-width: 555px;
+                width: 100%;
+                font-weight: 500;
+                font-size: 69px;
+                line-height: 90px;
                 color: #181D19;
+
+                @include media(1300) {
+                    max-width: 420px;
+                    font-size: 40px;
+                    line-height: 60px;
+                }
+
+                @include media(1000) {
+                    max-width: 330px;
+                    font-size: 36px;
+                    line-height: 50px;
+                }
+
+                @include media(800){
+                    width: 100%;
+                }
+
+               
 
                 &_span {
                     color: #5FB848;
+                }
+            }
+
+            &-text {
+                max-width: 500px;
+                width: 100%;
+                height: 100px;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 34px;
+
+                @include media(1300) {
+                    max-width: 330px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                @include media(1000) {
+                    max-width: 300px;
+                    height: 55px;
+                    font-size: 13px;
+                    line-height: 18px;
+                }
+            }
+
+            &-btn {
+                width: 200px;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 32px;
+                color: $white;
+                border: none;
+                padding: 16px 40px;
+                background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+                border-radius: 50px;
+                cursor: pointer;
+                transition: 0.3s;
+
+                @include media(1300) {
+                    width: 140px;
+                    font-size: 14px;
+                    padding: 8px 20px;
+                    border-radius: 30px;
+                }
+
+                @include media(1000) {
+                    width: 110px;
+                    font-size: 11px;
+                    padding: 2px 10px;
+                    border-radius: 15px;
+                }
+
+                &:hover {
+                    background: linear-gradient(360deg, #64BB47 0%, #2C9553 100%);
                 }
             }
         }
 
         &_img {
             display: flex;
-            max-width: 700px;
+            max-width: 980px;
             width: 100%;
 
+            @include media(1300) {
+                max-width: 600px;
+            }
+
+            @include media(1000) {
+                max-width: 500px;
+            }
+
+            // @include media(800) {
+            //     display: none;
+            // }
+
             &-foods {
-                
+                position: absolute;
+                max-width: 770px;
+                width: 100%;
+
+                @include media(1300) {
+                    max-width: 550px;
+                }
+
+                @include media(1000) {
+                    max-width: 450px;
+                }
             }
 
             &-leaves {
-                position: absolute;
-                max-width: 700px;
+                margin-top: 20px;
+                max-width: 980px;
                 width: 100%;
+
+                @include media(1300) {
+                    max-width: 530px;
+                }
+
+                @include media(1000) {
+                    max-width: 430px;
+                }
             }
         }
     }

@@ -10,6 +10,7 @@
     border-radius: 30px;
     box-shadow: 0 0 100px #dfdfdf, 10px 20px 150px rgba(255, 255, 255, 0.08);
     transition: .7s;
+    border: 1px solid $green;
 
     @include media(600) {
         width: 400px;
