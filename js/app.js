@@ -11,6 +11,7 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const bgFon = document.querySelector(".bg-fon");
 const modal = document.querySelector(".modal");
 const bannerTitle = document.querySelector(".header-banner_texts-title").innerHTML;
+const pageBody = document.querySelector("body")
 
 
 
@@ -21,6 +22,7 @@ burger.addEventListener("click", (e) => {
     burgerTop.classList.toggle("rotate");
     burgerBottom.classList.toggle("rotate");
     bgFon.classList.toggle("show");
+    pageBody.style.overflow = "hidden"
     document.body.addEventListener("click", () => {
         if (mobileMenu.classList.contains("open")) {
             mobileMenu.classList.remove("open");
