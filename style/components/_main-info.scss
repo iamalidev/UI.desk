@@ -1,16 +1,26 @@
 .main {
-    margin-block: 100px 120px;
-
     &-info {
+        margin-block: 100px 120px;
         padding: 0 85px;
 
+        @include media(576) {
+            padding: 0 0 0 15px;
+        }
+
         &_title {
-            font-family: "Poppins-Bold";
             font-weight: 500;
             font-size: 54px;
             line-height: 68px;
             text-align: center;
             color: #151414;
+
+            @include media(768) {
+                font-size: 40px;
+            }
+
+            @include media(576) {
+                font-size: 24px;
+            }
         }
 
         &_text {
@@ -20,6 +30,15 @@
             text-align: center;
             color: #3B433E;
             margin-top: 15px;
+
+            @include media(768) {
+                font-size: 18px;
+            }
+
+            @include media(576) {
+                font-size: 14px;
+                margin-top: 0;
+            }
         }
 
         &_section {
@@ -27,10 +46,21 @@
             gap: 100px;
             margin-block: 60px;
 
+            @include media(768) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @include media(576) {
+                gap: 50px;
+            }
+
             &-notepad,
             &-map,
             &-leaf {
-                width: 341px;
+                max-width: 341px;
+                width: 100%;
                 @include flexcenter;
                 flex-direction: column;
                 align-items: center;
@@ -47,6 +77,10 @@
                     text-align: center;
                     color: #181D19;
                     margin-block: 36px 18px;
+
+                    @include media(576) {
+                        font-size: 20px;
+                    }
                 }
 
                 &_text {
@@ -55,6 +89,10 @@
                     line-height: 28px;
                     text-align: center;
                     color: #3B433E;
+
+                    @include media(576) {
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -63,10 +101,25 @@
             @include flexcenter;
             gap: 160px;
 
+            @include media(768) {
+                gap: 80px;
+            }
+
+            @include media(576) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+
             &-food,
             &-trusted,
             &-order {
                 width: 150px;
+
+                @include media(768) {
+                    width: 100%;
+                }
 
                 &_title {
                     font-weight: 600;
@@ -76,6 +129,11 @@
                     color: $darkblack;
                     text-align: center;
                     margin-bottom: 20px;
+
+                    @include media(768) {
+                        font-size: 30px;
+                        margin-bottom: 0;
+                    }
                 }
 
                 &_text {
@@ -84,7 +142,10 @@
                     line-height: 25px;
                     text-align: center;
                     color: #545454;
-                    text-align: center;
+
+                    @include media(768) {
+                        font-size: 12px;
+                    }
                 }
             }
         }

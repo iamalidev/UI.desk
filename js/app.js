@@ -10,9 +10,6 @@ const burger = document.querySelector(".header-top_burgerMenu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const bgFon = document.querySelector(".bg-fon");
 const modal = document.querySelector(".modal");
-const bannerTitle = document.querySelector(".header-banner_texts-title").innerHTML;
-const pageBody = document.querySelector("body")
-
 
 
 burger.addEventListener("click", (e) => {

@@ -1,0 +1,37 @@
+.main {
+    &-freshvegs {
+        display: flex;
+        gap: 70px;
+
+        &_image {
+            max-width: 585px;
+            height: 480px;
+
+            &-img {
+                width: 100%;
+            }
+        }
+
+        &_texts {
+            max-width: 516px;
+            width: 100%;
+
+            &-title {
+                width: 100%;
+                font-weight: 500;
+                font-size: 54px;
+                line-height: 68px;
+                color: $blacktitle;
+            }
+
+            &-text {
+                width: 100%;
+                font-weight: 300;
+                font-size: 22px;
+                line-height: 34px;
+                color: $blacktext;
+                margin-block: 30px 40px;
+            }
+        }
+    }
+}

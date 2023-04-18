@@ -655,19 +655,31 @@ body {
   cursor: pointer;
 }
 
-.main {
-  margin-block: 100px 120px;
-}
 .main-info {
+  margin-block: 100px 120px;
   padding: 0 85px;
 }
+@media only screen and (max-width: 576px) {
+  .main-info {
+    padding: 0 0 0 15px;
+  }
+}
 .main-info_title {
-  font-family: "Poppins-Bold";
   font-weight: 500;
   font-size: 54px;
   line-height: 68px;
   text-align: center;
   color: #151414;
+}
+@media only screen and (max-width: 768px) {
+  .main-info_title {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .main-info_title {
+    font-size: 24px;
+  }
 }
 .main-info_text {
   font-weight: 300;
@@ -677,13 +689,37 @@ body {
   color: #3B433E;
   margin-top: 15px;
 }
+@media only screen and (max-width: 768px) {
+  .main-info_text {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .main-info_text {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
 .main-info_section {
   display: flex;
   gap: 100px;
   margin-block: 60px;
 }
+@media only screen and (max-width: 768px) {
+  .main-info_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .main-info_section {
+    gap: 50px;
+  }
+}
 .main-info_section-notepad, .main-info_section-map, .main-info_section-leaf {
-  width: 341px;
+  max-width: 341px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -701,6 +737,11 @@ body {
   color: #181D19;
   margin-block: 36px 18px;
 }
+@media only screen and (max-width: 576px) {
+  .main-info_section-notepad_title, .main-info_section-map_title, .main-info_section-leaf_title {
+    font-size: 20px;
+  }
+}
 .main-info_section-notepad_text, .main-info_section-map_text, .main-info_section-leaf_text {
   font-weight: 400;
   font-size: 18px;
@@ -708,13 +749,36 @@ body {
   text-align: center;
   color: #3B433E;
 }
+@media only screen and (max-width: 576px) {
+  .main-info_section-notepad_text, .main-info_section-map_text, .main-info_section-leaf_text {
+    font-size: 12px;
+  }
+}
 .main-info_numbers {
   display: flex;
   justify-content: center;
   gap: 160px;
 }
+@media only screen and (max-width: 768px) {
+  .main-info_numbers {
+    gap: 80px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .main-info_numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
 .main-info_numbers-food, .main-info_numbers-trusted, .main-info_numbers-order {
   width: 150px;
+}
+@media only screen and (max-width: 768px) {
+  .main-info_numbers-food, .main-info_numbers-trusted, .main-info_numbers-order {
+    width: 100%;
+  }
 }
 .main-info_numbers-food_title, .main-info_numbers-trusted_title, .main-info_numbers-order_title {
   font-weight: 600;
@@ -725,11 +789,166 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .main-info_numbers-food_title, .main-info_numbers-trusted_title, .main-info_numbers-order_title {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+}
 .main-info_numbers-food_text, .main-info_numbers-trusted_text, .main-info_numbers-order_text {
   font-weight: 500;
   font-size: 19px;
   line-height: 25px;
   text-align: center;
   color: #545454;
-  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .main-info_numbers-food_text, .main-info_numbers-trusted_text, .main-info_numbers-order_text {
+    font-size: 12px;
+  }
+}
+
+.main-aboutus {
+  margin-bottom: 120px;
+  padding: 0 32px;
+  display: flex;
+  gap: 95px;
+}
+.main-aboutus_texts {
+  max-width: 500px;
+  width: 100%;
+  padding-block: 127px;
+}
+.main-aboutus_texts-title {
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 68px;
+  color: #151414;
+}
+.main-aboutus_texts-text {
+  margin-block: 30px 68px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 34px;
+  color: #181D19;
+}
+.main-aboutus_texts-btn {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+  border-radius: 50px;
+  padding: 16px 41px;
+}
+.main-aboutus_images {
+  max-width: 640px;
+  width: 100%;
+  height: 722px;
+  display: flex;
+  gap: 20px;
+}
+.main-aboutus_images-left {
+  width: 310px;
+  height: 666px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-aboutus_images-left-top, .main-aboutus_images-left-bottom {
+  width: 310px;
+  height: 323px;
+}
+.main-aboutus_images-right {
+  width: 310px;
+  height: 670px;
+  margin-top: 52px;
+}
+
+.main-freshvegs {
+  display: flex;
+  gap: 70px;
+}
+.main-freshvegs_image {
+  max-width: 585px;
+  height: 480px;
+}
+.main-freshvegs_image-img {
+  width: 100%;
+}
+.main-freshvegs_texts {
+  max-width: 516px;
+  width: 100%;
+}
+.main-freshvegs_texts-title {
+  width: 100%;
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 68px;
+  color: #151414;
+}
+.main-freshvegs_texts-text {
+  width: 100%;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 34px;
+  color: #181D19;
+  margin-block: 30px 40px;
+}
+
+.main-chefs {
+  margin-block: 80px 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-chefs_texts {
+  max-width: 500px;
+  width: 100%;
+}
+.main-chefs_texts-title {
+  width: 100%;
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 68px;
+  color: #151414;
+}
+.main-chefs_texts-text {
+  width: 100%;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 34px;
+  color: #181D19;
+  margin-block: 30px;
+}
+.main-chefs_texts-checkboxs {
+  max-width: 324px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-chefs_texts-checkboxs_top, .main-chefs_texts-checkboxs_between, .main-chefs_texts-checkboxs_bottom {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.main-chefs_texts-checkboxs_top #checkbox, .main-chefs_texts-checkboxs_between #checkbox, .main-chefs_texts-checkboxs_bottom #checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #5a9e3c;
+}
+.main-chefs_texts-checkboxs_top-text, .main-chefs_texts-checkboxs_between-text, .main-chefs_texts-checkboxs_bottom-text {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 25px;
+  color: #181D19;
+}
+.main-chefs_image {
+  max-width: 727px;
+  width: 100%;
+  height: 622px;
+}
+.main-chefs_image-img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
