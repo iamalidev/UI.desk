@@ -2,10 +2,15 @@
     &-freshvegs {
         display: flex;
         gap: 70px;
+        overflow: hidden;
 
-        &_image {
+        &_images {
             max-width: 585px;
             height: 480px;
+            transform: translateX(-650px);
+            z-index: 0;
+            opacity: 0;
+            transition: 1s;
 
             &-img {
                 width: 100%;
@@ -22,6 +27,10 @@
                 font-size: 54px;
                 line-height: 68px;
                 color: $blacktitle;
+                transform: translateX(650px);
+                z-index: 0;
+                opacity: 0;
+                transition: 1s;
             }
 
             &-text {
@@ -31,6 +40,26 @@
                 line-height: 34px;
                 color: $blacktext;
                 margin-block: 30px 40px;
+                transform: translateX(950px);
+                z-index: 0;
+                opacity: 0;
+                transition: 1s;
+            }
+
+            &-btn {
+                width: max-content;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 32px;
+                color: $white;
+                background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+                border-radius: 50px;
+                padding: 16px 41px;
+                display: block;
+                transform: translateX(1150px);
+                z-index: 0;
+                opacity: 0;
+                transition: 1s;
             }
         }
     }

@@ -1,0 +1,57 @@
+.main {
+    &-subscribe {
+        padding: 120px 335px 150px 335px;
+
+        &_title {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 45px;
+            text-align: center;
+            color: $blacktitle;
+        }
+
+        &_text {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+            color: $blacktext;
+            margin-block: 15px 60px;
+        }
+
+        &_registration {
+            width: 515px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 0 auto;
+
+            &-email {
+                max-width: 330px;
+                width: 100%;
+                padding: 19px 0 18px 20px;
+                background: $white;
+                border: 1.5px solid #F5F5F5;
+                border-radius: 165px;
+                font-weight: 480;
+                font-size: 18px;
+                line-height: 22px;
+                color: #8A8A8A;
+            }
+
+            &-sumbit {
+                width: 170px;
+                padding: 17px 32px;
+                background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+                border: none;
+                border-radius: 50px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 27px;
+                text-align: center;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -45,6 +45,7 @@
             display: flex;
             gap: 100px;
             margin-block: 60px;
+            overflow: hidden;
 
             @include media(768) {
                 display: flex;
@@ -94,6 +95,27 @@
                         font-size: 12px;
                     }
                 }
+            }
+
+            &-map {
+                transform: translateY(-500px);
+                z-index: 0;
+                opacity: 0;
+                transition: 1s;
+            }
+
+            &-notepad {
+                transform: translateX(-400px);
+                z-index: 0;
+                opacity: 0;
+                transition: 1s;
+            }
+
+            &-leaf {
+                transform: translateX(400px);
+                z-index: 0;
+                opacity: 0;
+                transition: 1s;
             }
         }
 
@@ -147,6 +169,27 @@
                         font-size: 12px;
                     }
                 }
+            }
+
+            &-trusted {
+                transform: translateY(100px);
+                z-index: 0;
+                opacity: 0;
+                transition: 1s;
+            }
+
+            &-food {
+                transform: translateY(300px);
+                z-index: 0;
+                opacity: 0;
+                transition: 1s;
+            }
+
+            &-order {
+                transform: translateY(300px);
+                z-index: 0;
+                opacity: 0;
+                transition: 1s;
             }
         }
     }
