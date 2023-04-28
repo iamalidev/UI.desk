@@ -24,6 +24,9 @@ const infoLeaf = document.querySelector(".main-info_section-leaf");
 const infoTrusted = document.querySelector(".main-info_numbers-trusted");
 const infoFood = document.querySelector(".main-info_numbers-food");
 const infoOrder = document.querySelector(".main-info_numbers-order");
+const infoFoodTitle = document.querySelector(".main-info_numbers-food_animation-title");
+const infoTrustedTitle = document.querySelector(".main-info_numbers-trusted_animation-title");
+const infoOrderTitle = document.querySelector(".main-info_numbers-order_animation-title");
 const mainFresh = document.querySelector(".main-freshvegs");
 const freshImg = document.querySelector(".main-freshvegs_images");
 const freshTitle = document.querySelector(".main-freshvegs_texts-title");
@@ -41,6 +44,8 @@ const dishesFirst = document.querySelector(".main-dishes_cards-first");
 const dishesSecond = document.querySelector(".main-dishes_cards-second");
 const dishesThird = document.querySelector(".main-dishes_cards-third");
 const dishesBtn = document.querySelector(".main-dishes_btn");
+const subscribeBtn = document.querySelector(".main-subscribe_registration-sumbit");
+const bannerBtn = document.querySelector(".header-banner_texts-btn");
 const body = document.querySelector("body");
 
 
@@ -110,21 +115,9 @@ class typing {
 
 new typing({
     title: ".header-banner_texts-text",
-    delay: 100,
+    delay: 3100,
     interval: 20,
 });
-
-new typing({
-    title: ".main-info_text",
-    delay: 200,
-    interval: 10,
-});
-// new typing({
-//     title: ".main-aboutus_texts-text",
-//     delay: 1,
-//     interval: 100,
-// });
-
 
 
 const swiper = new Swiper(".mySwiper", {
@@ -181,7 +174,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > mainFresh.offsetTop - mainFresh.clientHeight) {
-        freshImg.style = `transform:translateX(0);
+        freshImg.style = `transform:translateY(0);
                           opacity:1;
                           z-index:1`;
         freshTitle.style = `transform:translateX(0);
@@ -214,7 +207,7 @@ window.addEventListener("scroll", () => {
         checkboxBottom.style = `transform:translateX(0);
                                 opacity:1;
                                 z-index:1`;
-        chefsImg.style = `transform:translateX(0);
+        chefsImg.style = `transform:translateY(0);
                           opacity:1;
                           z-index:1`;
     }
@@ -236,4 +229,109 @@ window.addEventListener("scroll", () => {
                            opacity:1;
                            z-index:1`;
     }
+})
+
+window.addEventListener("DOMContentLoaded", () => {
+    const loaderBg = document.querySelector(".loading");
+    const loader = document.querySelector(".loader");
+
+    setTimeout(() => {
+        loader.style.opacity = "0";
+        loaderBg.style.opacity = "0";
+        body.style = `overflow-y: auto;`
+        setTimeout(() => {
+            loader.style.display = "none";
+            loaderBg.style.display = "none";
+        }, 500);
+    }, 10);
+});
+
+window.addEventListener("scroll", function scroll() {
+    if (this.scrollY > mainInfo.offsetTop - mainInfo.clientHeight) {
+        let count = +infoFoodTitle.getAttribute("count");
+
+        function rec(i = 0) {
+            infoFoodTitle.innerHTML = i;
+            i++;
+            if (i <= count) {
+                setTimeout(() => {
+                    rec(i);
+                }, 84);
+            }
+        }
+        rec();
+        window.removeEventListener("scroll", scroll);
+    }
+})
+
+window.addEventListener("scroll", function scroll() {
+    if (this.scrollY > mainInfo.offsetTop - mainInfo.clientHeight) {
+        let count = +infoTrustedTitle.getAttribute("count");
+
+        function rec(i = 0) {
+            infoTrustedTitle.innerHTML = i;
+            i++;
+            if (i <= count) {
+                setTimeout(() => {
+                    rec(i);
+                }, 7);
+            }
+        }
+        rec();
+        window.removeEventListener("scroll", scroll);
+    }
+})
+
+window.addEventListener("scroll", function scroll() {
+    if (this.scrollY > mainInfo.offsetTop - mainInfo.clientHeight) {
+        let count = +infoOrderTitle.getAttribute("count");
+
+        function rec(i = 0) {
+            infoOrderTitle.innerHTML = i;
+            i++;
+            if (i <= count) {
+                setTimeout(() => {
+                    rec(i);
+                }, 290);
+            }
+        }
+        rec();
+        window.removeEventListener("scroll", scroll);
+    }
+})
+
+
+window.addEventListener("mousemove", (e) => {
+    let x = e.pageX - bannerBtn.offsetLeft
+    let y = e.pageY - bannerBtn.offsetTop
+    bannerBtn.style.setProperty('--x', `${x}px`)
+    bannerBtn.style.setProperty('--y', `${y}px`)
+})
+
+window.addEventListener("mousemove", (e) => {
+    let x = e.pageX - aboutBtn.offsetLeft
+    let y = e.pageY - aboutBtn.offsetTop
+    aboutBtn.style.setProperty('--x', `${x}px`)
+    aboutBtn.style.setProperty('--y', `${y}px`)
+})
+
+window.addEventListener("mousemove", (e) => {
+    let x = e.pageX - freshBtn.offsetLeft
+    let y = e.pageY - freshBtn.offsetTop
+    freshBtn.style.setProperty('--x', `${x}px`)
+    freshBtn.style.setProperty('--y', `${y}px`)
+})
+
+window.addEventListener("mousemove", (e) => {
+    let x = e.pageX - dishesBtn.offsetLeft
+    let y = e.pageY - dishesBtn.offsetTop
+    dishesBtn.style.setProperty('--x', `${x}px`)
+    dishesBtn.style.setProperty('--y', `${y}px`)
+})
+
+window.addEventListener("mousemove", (e) => {
+    let x = e.pageX - dishesBtn.offsetLeft
+    let y = e.pageY - dishesBtn.offsetTop
+    dishesBtn.style.setProperty('--x', `${x}px`)
+    dishesBtn.style.setProperty('--y', `${y}px`)
 })

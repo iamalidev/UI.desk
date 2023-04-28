@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <div class="loading">
+        <span class="loader"></span>
+    </div>
+
     <div class="bg-fon"></div>
 
 <!-- |||||||||||||||||||||||||||||||||||||||| HEADER |||||||||||||||||||||||||||||||||||||||-->
@@ -142,19 +146,27 @@
                 <div class="main-info_numbers">
 
                     <div class="main-info_numbers-food">
-                        <h3 class="main-info_numbers-food_title">40+</h3>
+                        <div class="main-info_numbers-food_animation">
+                            <div class="main-info_numbers-food_animation-title" count="40"></div>
+                            <p class="main-info_numbers-food_animation-text">+</p>
+                        </div>
                         <p class="main-info_numbers-food_text">Food Partners</p>
                     </div>
 
                     <div class="main-info_numbers-trusted">
-                        <h3 class="main-info_numbers-trusted_title">459+</h3>
+                        <div class="main-info_numbers-trusted_animation">
+                            <div class="main-info_numbers-trusted_animation-title" count="459"></div>
+                            <p class="main-info_numbers-trusted_animation-text">+</p>
+                        </div>
                         <p class="main-info_numbers-trusted_text">Trusted Clients</p>
                     </div>
 
                     <div class="main-info_numbers-order">
-                        <h3 class="main-info_numbers-order_title">12k+</h3>
+                        <div class="main-info_numbers-order_animation">
+                            <div class="main-info_numbers-order_animation-title" count="12"></div>
+                            <p class="main-info_numbers-order_animation-text">k+</p>
+                        </div>
                         <p class="main-info_numbers-order_text">Order Online</p>
-
                     </div>
                 </div>
             </div>
@@ -199,20 +211,20 @@
                         design active temper be uneasy. Thirty for remove plenty regard you summer though. He preference
                         connection astonished on of ye.</p>
                     <div class="main-chefs_texts-checkboxs">
-                        <div class="main-chefs_texts-checkboxs_top">
-                            <input type="checkbox" name="checkbox" id="checkbox">
-                            <p class="main-chefs_texts-checkboxs_top-text">A guaranteed delicious meal</p>
-                        </div>
+                        <form action="" class="main-chefs_texts-checkboxs_top">
+                            <input class="checkbox" type="checkbox" id="top">
+                            <label class="main-chefs_texts-checkboxs_top-text" for="top">A guaranteed delicious meal</label>
+                        </form>
 
-                        <div class="main-chefs_texts-checkboxs_between">
-                            <input type="checkbox" name="checkbox" id="checkbox">
-                            <p class="main-chefs_texts-checkboxs_between-text">Food is guaranteed hygienic</p>
-                        </div>
+                        <form action="" class="main-chefs_texts-checkboxs_between">
+                            <input class="checkbox" type="checkbox" id="between">
+                            <label class="main-chefs_texts-checkboxs_between-text" for="between">Food is guaranteed hygienic</label>
+                        </form>
 
-                        <div class="main-chefs_texts-checkboxs_bottom">
-                            <input type="checkbox" name="checkbox" id="checkbox">
-                            <p class="main-chefs_texts-checkboxs_bottom-text">Cooked quickly</p>
-                        </div>
+                        <form action="" class="main-chefs_texts-checkboxs_bottom">
+                            <input class="checkbox" type="checkbox" id="bottom">
+                            <label class="main-chefs_texts-checkboxs_bottom-text" for="bottom">Cooked quickly</label>
+                        </form>
                     </div>
                 </div>
                 <div class="main-chefs_image">
@@ -249,15 +261,95 @@
             </div>
 
         </div>
-        <!-- <div class="main-clients">
+
+        <div class="main-clients">
             <div class="container">
                 <h2 class="main-clients_title">Happy Clients Says</h2>
                 <div class="swiper mySwiper main-clients_swiper">
                     <div class="swiper-wrapper main-clients_swiper-wrapper">
-                        <div class="swiper-slide main-clients_swiper-wrapper_slide">Slide 1</div>
-                        <div class="swiper-slide main-clients_swiper-wrapper_slide">Slide 2</div>
-                        <div class="swiper-slide main-clients_swiper-wrapper_slide">Slide 3</div>
-                        <div class="swiper-slide main-clients_swiper-wrapper_slide">Slide 4</div>
+                        <div class="swiper-slide main-clients_swiper-wrapper_slide">
+                            <div class="main-clients_swiper-wrapper_slide-top">
+                                <div class="main-clients_swiper-wrapper_slide-top_left">
+                                    <img src="./img/avatar1.png" alt="" class="main-clients_swiper-wrapper_slide-top_left-img">
+                                    <div class="main-clients_swiper-wrapper_slide-top_left-texts">
+                                        <h4 class="main-clients_swiper-wrapper_slide-top_left-texts_title">KHALIL NAZIR</h4>
+                                        <p class="main-clients_swiper-wrapper_slide-top_left-texts_text">CEO of UI.Desk</p>
+                                    </div>
+                                </div>
+                                <img src="./img/mark.png" alt="" class="main-clients_swiper-wrapper_slide-top_mark">
+                            </div>
+                            <p class="main-clients_swiper-wrapper_slide-text">Thirty for remove plenty regard you summer though. He preference Partiality on or continuing in particular principles as. Do believing oh disposing to supported allowance we.</p>
+                        </div>
+
+                        <div class="swiper-slide main-clients_swiper-wrapper_slide">
+                            <div class="main-clients_swiper-wrapper_slide-top">
+                                <div class="main-clients_swiper-wrapper_slide-top_left">
+                                    <img src="./img/avatar2.png" alt="" class="main-clients_swiper-wrapper_slide-top_left-img">
+                                    <div class="main-clients_swiper-wrapper_slide-top_left-texts">
+                                        <h4 class="main-clients_swiper-wrapper_slide-top_left-texts_title">ZEESHAN ANWER</h4>
+                                        <p class="main-clients_swiper-wrapper_slide-top_left-texts_text">CEO of UI Box</p>
+                                    </div>
+                                </div>
+                                <img src="./img/mark.png" alt="" class="main-clients_swiper-wrapper_slide-top_mark">
+                            </div>
+                            <p class="main-clients_swiper-wrapper_slide-text">Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush. Merits behind on afraid or warmly.</p>
+                        </div>
+
+                        <div class="swiper-slide main-clients_swiper-wrapper_slide">
+                            <div class="main-clients_swiper-wrapper_slide-top">
+                                <div class="main-clients_swiper-wrapper_slide-top_left">
+                                    <img src="./img/avatar1.png" alt="" class="main-clients_swiper-wrapper_slide-top_left-img">
+                                    <div class="main-clients_swiper-wrapper_slide-top_left-texts">
+                                        <h4 class="main-clients_swiper-wrapper_slide-top_left-texts_title">KHALIL NAZIR</h4>
+                                        <p class="main-clients_swiper-wrapper_slide-top_left-texts_text">CEO of UI.Desk</p>
+                                    </div>
+                                </div>
+                                <img src="./img/mark.png" alt="" class="main-clients_swiper-wrapper_slide-top_mark">
+                            </div>
+                            <p class="main-clients_swiper-wrapper_slide-text">Thirty for remove plenty regard you summer though. He preference Partiality on or continuing in particular principles as. Do believing oh disposing to supported allowance we.</p>
+                        </div>
+
+                        <div class="swiper-slide main-clients_swiper-wrapper_slide">
+                            <div class="main-clients_swiper-wrapper_slide-top">
+                                <div class="main-clients_swiper-wrapper_slide-top_left">
+                                    <img src="./img/avatar2.png" alt="" class="main-clients_swiper-wrapper_slide-top_left-img">
+                                    <div class="main-clients_swiper-wrapper_slide-top_left-texts">
+                                        <h4 class="main-clients_swiper-wrapper_slide-top_left-texts_title">ZEESHAN ANWER</h4>
+                                        <p class="main-clients_swiper-wrapper_slide-top_left-texts_text">CEO of UI Box</p>
+                                    </div>
+                                </div>
+                                <img src="./img/mark.png" alt="" class="main-clients_swiper-wrapper_slide-top_mark">
+                            </div>
+                            <p class="main-clients_swiper-wrapper_slide-text">Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush. Merits behind on afraid or warmly.</p>
+                        </div>
+
+                        <div class="swiper-slide main-clients_swiper-wrapper_slide">
+                            <div class="main-clients_swiper-wrapper_slide-top">
+                                <div class="main-clients_swiper-wrapper_slide-top_left">
+                                    <img src="./img/avatar1.png" alt="" class="main-clients_swiper-wrapper_slide-top_left-img">
+                                    <div class="main-clients_swiper-wrapper_slide-top_left-texts">
+                                        <h4 class="main-clients_swiper-wrapper_slide-top_left-texts_title">KHALIL NAZIR</h4>
+                                        <p class="main-clients_swiper-wrapper_slide-top_left-texts_text">CEO of UI.Desk</p>
+                                    </div>
+                                </div>
+                                <img src="./img/mark.png" alt="" class="main-clients_swiper-wrapper_slide-top_mark">
+                            </div>
+                            <p class="main-clients_swiper-wrapper_slide-text">Thirty for remove plenty regard you summer though. He preference Partiality on or continuing in particular principles as. Do believing oh disposing to supported allowance we.</p>
+                        </div>
+
+                        <div class="swiper-slide main-clients_swiper-wrapper_slide">
+                            <div class="main-clients_swiper-wrapper_slide-top">
+                                <div class="main-clients_swiper-wrapper_slide-top_left">
+                                    <img src="./img/avatar2.png" alt="" class="main-clients_swiper-wrapper_slide-top_left-img">
+                                    <div class="main-clients_swiper-wrapper_slide-top_left-texts">
+                                        <h4 class="main-clients_swiper-wrapper_slide-top_left-texts_title">ZEESHAN ANWER</h4>
+                                        <p class="main-clients_swiper-wrapper_slide-top_left-texts_text">CEO of UI Box</p>
+                                    </div>
+                                </div>
+                                <img src="./img/mark.png" alt="" class="main-clients_swiper-wrapper_slide-top_mark">
+                            </div>
+                            <p class="main-clients_swiper-wrapper_slide-text">Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush. Merits behind on afraid or warmly.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="main-clients_nav">
@@ -265,7 +357,7 @@
                     <div class="swiper-button-prev main-clients_nav-prev"><img src="./img/prew.png" alt=""></div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <div class="main-subscribe">
             <div class="container">
@@ -278,7 +370,58 @@
                 </div>
             </div>
         </div>
+
     </div>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-top">
+
+                <div class="footer-top_first">
+                    <h3 class="footer-top_first-title">UI.desk</h3>
+                    <p class="footer-top_first-text">On formed merits hunted unable merely by mr whence or. </p>
+                </div>
+    
+                <div class="footer-top_home">
+                    <h3 class="footer-top_home-title">Home</h3>
+                    <p class="footer-top_home-text">Company</p>
+                    <p class="footer-top_home-text">News</p>
+                    <p class="footer-top_home-text">Team</p>
+                </div>
+    
+                <div class="footer-top_about">
+                    <h3 class="footer-top_about-title">About</h3>
+                    <p class="footer-top_about-text">History</p>
+                    <p class="footer-top_about-text">Service</p>
+                    <p class="footer-top_about-text">Pricing</p>
+                </div>
+    
+                <div class="footer-top_partner">
+                    <h3 class="footer-top_partner-title">Partner</h3>
+                    <p class="footer-top_partner-text">Business</p>
+                    <p class="footer-top_partner-text">Plan</p>
+                    <p class="footer-top_partner-text">Marketing</p>
+                </div>
+    
+                <div class="footer-top_contact">
+                    <h3 class="footer-top_contact-title">Contact</h3>
+                    <p class="footer-top_contact-text">UI.desk</p>
+                    <p class="footer-top_contact-text">(465)954-8487</p>
+                    <p class="footer-top_contact-text">Lahore, Pakistan</p>
+                </div>
+    
+            </div>
+    
+            
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-bottom_text">© Copyright 2020 by ui.desk. All right reserved.</p>
+        </div>
+        
+    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>

@@ -3,16 +3,24 @@
         padding: 70px 120px;
         margin-block: 120px;
         background-color: #FCFCFC;
-        border: 1px solid #000;
+        // border: 1px solid #000;
+
+        &_title {
+            font-weight: 500;
+            font-size: 54px;
+            line-height: 68px;
+            text-align: center;
+            color: $blacktitle;
+            margin-bottom: 47px;
+        }
 
         &_swiper {
-            width: 1057px !important;
+            width: 1083px !important;
             height: 400px !important;
             background-color: fcfcfc;
-            border: 1px solid #000;
+            // border: 1px solid #000;
 
             &-wrapper {
-
 
                 &_slide {
                     max-width: 514px !important;
@@ -20,10 +28,69 @@
                     height: 347px !important;
                     background: #FFFFFF;
                     border: 2px solid #FFFFFF;
-                    box-shadow: 3px 15px 35px rgba(120, 125, 173, 0.06);
+                    box-shadow: 1px 1px 10px rgba(120, 125, 173, 0.06);
                     border-radius: 8px;
-                    border: 1px solid #000;
+                    // border: 1px solid rgb(0, 0, 0);
+                    margin: 10px;
+                    padding: 37px 22px 64px 25px;
+
+                    &-top {
+                        @include flexbetween;
+                        margin-bottom: 32px;
+
+                        &_left {
+                            display: flex;
+                            gap: 37px;
+
+                            &-img {
+                                margin-top: 3px;
+                            }
+
+                            &-texts {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 3px;
+
+                                &_title {
+                                    font-weight: 500;
+                                    font-size: 20px;
+                                    line-height: 25px;
+                                    color: #333333;
+                                }
+
+                                &_text {
+                                    font-weight: 300;
+                                    font-size: 14px;
+                                    line-height: 17px;
+                                    color: #888A9A;
+                                }
+                            }
+                        }
+
+                        &_mark {
+                            margin-bottom: 22px;
+                        }
+                    }
+
+                    &-text {
+                        font-weight: 300;
+                        font-size: 18px;
+                        line-height: 30px;
+                        color: #181D19;
+                    }
                 }
+            }
+        }
+
+        &_nav {
+            width: 105px;
+            position: absolute;
+            left: 47%;
+
+            &-next::after,
+            &-prev::after {
+                display: none;
             }
         }
     }

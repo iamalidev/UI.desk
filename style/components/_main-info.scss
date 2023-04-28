@@ -143,18 +143,29 @@
                     width: 100%;
                 }
 
-                &_title {
-                    font-weight: 600;
-                    font-size: 44px;
-                    line-height: 55px;
-                    text-align: center;
-                    color: $darkblack;
-                    text-align: center;
+                &_animation {
+                    display: flex;
+                    justify-content: center;
                     margin-bottom: 20px;
 
-                    @include media(768) {
-                        font-size: 30px;
-                        margin-bottom: 0;
+                    &-title {
+                        font-weight: 600;
+                        font-size: 44px;
+                        line-height: 55px;
+                        text-align: center;
+                        color: $darkblack;
+
+                        @include media(768) {
+                            font-size: 30px;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    &-text {
+                        font-weight: 600;
+                        font-size: 44px;
+                        line-height: 55px;
+                        color: $darkblack;
                     }
                 }
 

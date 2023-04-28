@@ -1,0 +1,66 @@
+.footer {
+    background-color: #FCFCFC;
+
+    &-top {
+        padding-block: 114px 174px;
+        @include flexbetween;
+
+        &_first {
+            width: 262px;
+            display: flex;
+            flex-direction: column;
+            gap: 34px;
+
+            &-title {
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 32px;
+                color: $footertitle;
+            }
+
+            &-text {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 20px;
+                color: $footertext;
+            }
+        }
+
+        &_home,
+        &_about,
+        &_partner,
+        &_contact {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            &-title {
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 28px;
+                color: $footertitle;
+                margin-bottom: 8px;
+            }
+
+            &-text {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 20px;
+                color: $footertext;
+            }
+        }
+    }
+
+    &-bottom {
+        padding-block: 20px;
+        background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+
+        &_text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            color: $white;
+        }
+    }
+}

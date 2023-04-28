@@ -7,7 +7,7 @@
         &_images {
             max-width: 585px;
             height: 480px;
-            transform: translateX(-650px);
+            transform: translateY(-650px);
             z-index: 0;
             opacity: 0;
             transition: 1s;
@@ -57,9 +57,36 @@
                 padding: 16px 41px;
                 display: block;
                 transform: translateX(1150px);
-                z-index: 0;
                 opacity: 0;
-                transition: 1s;
+                border: 2px solid #5FB848;
+                cursor: pointer;
+                transition: 0.3s;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+
+                &::after {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    background-color: $white;
+                    position: absolute;
+                    left: var(--x);
+                    top: var(--y);
+                    transition: 0.3s all linear;
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                }
+
+                &:hover {
+                    color: #5FB848;
+                }
+
+                &:hover::after {
+                    width: 500px;
+                    height: 500px;
+                }
             }
         }
     }
