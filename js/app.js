@@ -243,7 +243,7 @@ window.addEventListener("DOMContentLoaded", () => {
             loader.style.display = "none";
             loaderBg.style.display = "none";
         }, 500);
-    }, 10);
+    }, 3000);
 });
 
 window.addEventListener("scroll", function scroll() {
