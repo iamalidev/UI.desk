@@ -4,7 +4,12 @@
         padding: 0 85px;
 
         @include media(576) {
+            margin-block: 0;
             padding: 0 0 0 15px;
+        }
+
+        @include media(1150) {
+            margin-block: 100px 60px;
         }
 
         &_title {
@@ -166,6 +171,10 @@
                         font-size: 44px;
                         line-height: 55px;
                         color: $darkblack;
+
+                        @include media(768) {
+                            font-size: 30px;
+                        }
                     }
                 }
 

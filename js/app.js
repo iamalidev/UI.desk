@@ -56,7 +56,7 @@ burger.addEventListener("click", (e) => {
     burgerTop.classList.toggle("rotate");
     burgerBottom.classList.toggle("rotate");
     bgFon.classList.toggle("show");
-    pageBody.style.overflow = "hidden"
+    pageBody.style.overflow = "hidden";
     document.body.addEventListener("click", () => {
         if (mobileMenu.classList.contains("open")) {
             mobileMenu.classList.remove("open");
@@ -75,7 +75,7 @@ mobileMenu.addEventListener("click", (e) => {
 orderBtn.addEventListener("click", () => {
     modal.classList.add("open");
     bgFon.classList.add("show");
-    body.style = `overflow-y: hidden`
+    body.style.overflow = "hidden";
 })
 
 mobileMenuOrderBtn.addEventListener("click", () => {
@@ -87,6 +87,7 @@ mobileMenuOrderBtn.addEventListener("click", () => {
 modalClose.addEventListener("click", () => {
     modal.classList.remove("open");
     bgFon.classList.remove("show");
+    body.style.overflow = "auto";
 })
 
 class typing {
@@ -274,7 +275,7 @@ window.addEventListener("scroll", function scroll() {
             if (i <= count) {
                 setTimeout(() => {
                     rec(i);
-                }, 7);
+                }, 6);
             }
         }
         rec();
@@ -334,4 +335,11 @@ window.addEventListener("mousemove", (e) => {
     let y = e.pageY - dishesBtn.offsetTop
     dishesBtn.style.setProperty('--x', `${x}px`)
     dishesBtn.style.setProperty('--y', `${y}px`)
+})
+
+window.addEventListener("mousemove", (e) => {
+    let x = e.pageX - subscribeBtn.offsetLeft
+    let y = e.pageY - subscribeBtn.offsetTop
+    subscribeBtn.style.setProperty('--x', `${x}px`)
+    subscribeBtn.style.setProperty('--y', `${y}px`)
 })

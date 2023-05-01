@@ -3,14 +3,25 @@
         margin-bottom: 120px;
         padding: 0 32px;
         display: flex;
+        align-items: center;
         gap: 95px;
         overflow: hidden;
         z-index: -1;
+
+        @include media(768) {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
 
         &_texts {
             max-width: 500px;
             width: 100%;
             padding-block: 127px;
+
+            @include media(768) {
+                padding-block: 50px;
+            }
 
             &-title {
                 font-weight: 500;
@@ -21,6 +32,19 @@
                 z-index: 0;
                 opacity: 0;
                 transition: 1s;
+
+                @include media(1150) {
+                    font-size: 30px;
+                }
+
+                @include media(768) {
+                    font-size: 40px;
+                    text-align: center;
+                }
+
+                @include media(576) {
+                    font-size: 24px;
+                }
             }
 
             &-text {
@@ -33,6 +57,20 @@
                 z-index: 0;
                 opacity: 0;
                 transition: 1s;
+
+                @include media(1150) {
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-block: 15px 34px;
+                }
+
+                @include media(768) {
+                    text-align: center;
+                }
+
+                @include media(576) {
+                    font-size: 14px;
+                }
             }
 
             &-btn {
@@ -48,13 +86,21 @@
                 z-index: 0;
                 opacity: 0;
                 display: block;
-
                 border: 2px solid #5FB848;
                 cursor: pointer;
                 transition: 0.3s;
                 position: relative;
                 overflow: hidden;
                 z-index: 1;
+
+                @include media(1150) {
+                    font-size: 16px;
+                    padding: 8px 20px;
+                }
+
+                @include media(768) {
+                    margin: 0 auto;
+                }
 
                 &::after {
                     content: '';
@@ -88,6 +134,28 @@
             display: flex;
             gap: 20px;
 
+            @include media(1150) {
+                max-width: 320px;
+                width: 100%;
+                height: 366px;
+                display: flex;
+                gap: 10px;
+            }
+
+            @include media(768) {
+                max-width: 480px;
+                width: 100%;
+                height: 549px;
+                gap: 15px;
+            }
+
+            @include media(576) {
+                width: 290px;
+                height: 366px;
+                display: flex;
+                gap: 10px;
+            }
+
             &-left {
                 width: 310px;
                 height: 666px;
@@ -99,10 +167,43 @@
                 opacity: 0;
                 transition: 1s;
 
+                @include media(1150) {
+                    width: 155px;
+                    height: 333px;
+                    gap: 10px;
+                }
+
+                @include media(768) {
+                    width: 227.5px;
+                    height: 499.5px;
+                    gap: 15px;
+                }
+
+                @include media(576) {
+                    width: 140px;
+                    height: 333px;
+                    gap: 10px;
+                }
+
                 &-top,
                 &-bottom {
                     width: 310px;
                     height: 323px;
+
+                    @include media(1150) {
+                        width: 155px;
+                        height: 161.5px;
+                    }
+
+                    @include media(768) {
+                        width: 227.5px;
+                        height: 81px;
+                    }
+
+                    @include media(576) {
+                        width: 155px;
+                        height: 161.5px;
+                    }
                 }
             }
 
@@ -114,6 +215,21 @@
                 z-index: 0;
                 opacity: 0;
                 transition: 1s;
+
+                @include media(1150) {
+                    width: 155px;
+                    height: 335px;
+                }
+
+                @include media(768) {
+                    width: 227.5px;
+                    height: 499.5px;
+                }
+
+                @include media(576) {
+                    width: 140px;
+                    height: 335px;
+                }
             }
         }
     }
