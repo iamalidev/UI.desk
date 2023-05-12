@@ -3,7 +3,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        // overflow: hidden;
         margin-bottom: 200px;
 
         &_title {
@@ -13,6 +12,19 @@
             text-align: center;
             color: $blacktitle;
             margin-block: 15px;
+
+            @include media(1200) {
+                font-size: 30px;
+            }
+
+            @include media(768) {
+                font-size: 40px;
+            }
+
+            @include media(576) {
+                font-size: 24px;
+                line-height: 40px;
+            }
         }
 
         &_text {
@@ -21,6 +33,20 @@
             line-height: 30px;
             text-align: center;
             color: $blacktext;
+
+            @include media(1200) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+
+            @include media(768) {
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            @include media(576) {
+                font-size: 14px;
+            }
         }
 
         &_cards {
@@ -28,23 +54,64 @@
             gap: 51px;
             margin-block: 60px;
 
+            @include media(1200) {
+                gap: 20px;
+            }
+
+            @include media(768) {
+                display: flex;
+                flex-direction: column;
+                gap: 51px;
+            }
+
+            @include media(768) {
+                gap: 20px;
+            }
+
             &-first,
             &-second,
             &-third {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                max-width: 356px;
-                width: 100%;
                 padding: 51px 31px;
                 border: 1px solid #EBEBEB;
                 border-radius: 20px;
                 transition: 1s !important;
                 cursor: pointer;
 
+                @include media(1200) {
+                    padding: 25px 15px;
+                }
+
+                @include media(768) {
+                    padding: 51px 31px;
+                }
+
+                @include media(576) {
+                    padding: 25px 15px;
+                }
+
                 &:hover {
                     transform: scale(1.05, 1.05) !important;
                     box-shadow: -15px -50px 81px #FFFFFF, 10px 20px 70px rgba(0, 0, 0, 0.08);
+                }
+
+                &_img {
+                    @include media(1200) {
+                        width: 180px;
+                        height: 180px;
+                    }
+
+                    @include media(768) {
+                        width: 250px;
+                        height: 250px;
+                    }
+
+                    @include media(576) {
+                        width: 180px;
+                        height: 180px;
+                    }
                 }
 
                 &_title {
@@ -53,6 +120,21 @@
                     line-height: 38px;
                     text-align: center;
                     margin-block: 27px 20px;
+
+                    @include media(1200) {
+                        font-size: 20px;
+                        margin-block: 13px 10px;
+                    }
+
+                    @include media(768) {
+                        font-size: 30px;
+                        margin-block: 27px 20px;
+                    }
+
+                    @include media(576) {
+                        font-size: 20px;
+                        margin-block: 13px 10px;
+                    }
                 }
 
                 &_text {
@@ -65,6 +147,21 @@
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
+
+                    @include media(1200) {
+                        width: 200px;
+                        font-size: 14px;
+                    }
+
+                    @include media(768) {
+                        width: 293px;
+                        font-size: 17px;
+                    }
+
+                    @include media(576) {
+                        width: 200px;
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -109,6 +206,11 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
+
+            @include media(1200) {
+                font-size: 16px;
+                padding: 8px 35px;
+            }
 
             &::after {
                 content: '';

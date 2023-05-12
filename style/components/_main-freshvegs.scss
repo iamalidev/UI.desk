@@ -4,6 +4,12 @@
         gap: 70px;
         overflow: hidden;
 
+        @include media(768) {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
         &_images {
             max-width: 585px;
             height: 480px;
@@ -11,6 +17,16 @@
             z-index: 0;
             opacity: 0;
             transition: 1s;
+
+            @include media(768) {
+                width: 438px;
+                height: 360px;
+            }
+
+            @include media(576) {
+                width: 292px;
+                height: 240px;
+            }
 
             &-img {
                 width: 100%;
@@ -31,6 +47,20 @@
                 z-index: 0;
                 opacity: 0;
                 transition: 1s;
+
+                @include media(1000) {
+                    font-size: 30px;
+                }
+
+                @include media(768) {
+                    font-size: 40px;
+                    text-align: center;
+                }
+
+                @include media(576) {
+                    font-size: 24px;
+                    line-height: 40px;
+                }
             }
 
             &-text {
@@ -44,6 +74,20 @@
                 z-index: 0;
                 opacity: 0;
                 transition: 1s;
+
+                @include media(1000) {
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-block: 15px 34px;
+                }
+
+                @include media(768) {
+                    text-align: center;
+                }
+
+                @include media(576) {
+                    font-size: 14px;
+                }
             }
 
             &-btn {
@@ -64,6 +108,15 @@
                 position: relative;
                 overflow: hidden;
                 z-index: 1;
+
+                @include media(1000) {
+                    font-size: 16px;
+                    padding: 8px 20px;
+                }
+
+                @include media(768) {
+                    margin: 0 auto;
+                }
 
                 &::after {
                     content: '';

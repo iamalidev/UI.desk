@@ -8,6 +8,14 @@
         overflow: hidden;
         z-index: -1;
 
+        @include media(1150) {
+            margin-bottom: 0;
+        }
+
+        @include media(768) {
+            margin-bottom: 100px;
+        }
+
         @include media(768) {
             display: flex;
             flex-direction: column;
@@ -224,11 +232,13 @@
                 @include media(768) {
                     width: 227.5px;
                     height: 499.5px;
+                    margin-top: 49px;
                 }
 
                 @include media(576) {
                     width: 140px;
                     height: 335px;
+                    margin-top: 30px;
                 }
             }
         }

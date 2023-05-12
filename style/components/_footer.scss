@@ -54,12 +54,13 @@
     &-bottom {
         padding-block: 20px;
         background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+        display: flex;
+        justify-content: center;
 
         &_text {
             font-weight: 300;
             font-size: 16px;
             line-height: 20px;
-            text-align: center;
             color: $white;
         }
     }

@@ -4,9 +4,26 @@
         @include flexbetween;
         overflow: hidden;
 
+        @include media(768) {
+            display: flex;
+            flex-direction: column;
+        }
+
         &_texts {
             max-width: 500px;
             width: 100%;
+
+            @include media(1100) {
+                margin-bottom: 120px;
+            }
+
+            @include media(992) {
+                margin-bottom: 250px;
+            }
+
+            @include media(768) {
+                margin-bottom: 60px;
+            }
 
             &-title {
                 width: 100%;
@@ -18,6 +35,20 @@
                 z-index: 0;
                 opacity: 0;
                 transition: 1s;
+
+                @include media(1100) {
+                    font-size: 30px;
+                }
+
+                @include media(768) {
+                    font-size: 40px;
+                    text-align: center;
+                }
+
+                @include media(576) {
+                    font-size: 24px;
+                    line-height: 40px;
+                }
             }
 
             &-text {
@@ -31,14 +62,49 @@
                 z-index: 0;
                 opacity: 0;
                 transition: 1s;
+
+                @include media(1100) {
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-block: 0 20px;
+                }
+
+                @include media(768) {
+                    text-align: center;
+                    margin-block: 10px 30px;
+                }
+
+                @include media(576) {
+                    font-size: 14px;
+                }
             }
 
             &-checkboxs {
-                max-width: 324px;
+                max-width: 330px;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+
+                @include media(768) {
+                    margin-left: 130px;
+                }
+                
+                @include media(576) {
+                    margin-left: 120px;
+                }
+
+                @include media(450) {
+                    margin-left: 100px;
+                }
+
+                @include media(400) {
+                    margin-left: 70px;
+                }
+
+                @include media(340) {
+                    margin-left: 30px;
+                }
 
                 &_top,
                 &_between,
@@ -60,6 +126,11 @@
                         line-height: 25px;
                         color: $blacktext;
                         cursor: pointer;
+
+                        @include media(1100) {
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
                     }
                 }
 
@@ -94,6 +165,18 @@
             z-index: 0;
             opacity: 0;
             transition: 1s;
+
+            @include media(768) {
+                max-width: 545px;
+                width: 100%;
+                height: 466px;
+            }
+
+            @include media(576) {
+                max-width: 363px;
+                width: 100%;
+                height: 311px;
+            }
 
             &-img {
                 width: 100%;

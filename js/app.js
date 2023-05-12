@@ -56,7 +56,7 @@ burger.addEventListener("click", (e) => {
     burgerTop.classList.toggle("rotate");
     burgerBottom.classList.toggle("rotate");
     bgFon.classList.toggle("show");
-    pageBody.style.overflow = "hidden";
+    body.style.overflowY = "hidden";
     document.body.addEventListener("click", () => {
         if (mobileMenu.classList.contains("open")) {
             mobileMenu.classList.remove("open");
