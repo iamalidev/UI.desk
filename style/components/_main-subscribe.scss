@@ -2,12 +2,25 @@
     &-subscribe {
         padding: 120px 335px 150px 335px;
 
+        @include media(1200) {
+            padding: 70px 0;
+        }
+
         &_title {
             font-weight: 500;
             font-size: 36px;
             line-height: 45px;
             text-align: center;
             color: $blacktitle;
+
+            @include media(768) {
+                font-size: 40px;
+            }
+
+            @include media(576) {
+                font-size: 24px;
+                line-height: 40px;
+            }
         }
 
         &_text {
@@ -17,14 +30,29 @@
             text-align: center;
             color: $blacktext;
             margin-block: 15px 60px;
+
+            @include media(768) {
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            @include media(576) {
+                font-size: 14px;
+            }
         }
 
         &_registration {
-            width: 515px;
+            max-width: 515px;
             display: flex;
             justify-content: center;
             gap: 15px;
             margin: 0 auto;
+
+            @include media(576) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
 
             &-email {
                 max-width: 330px;
@@ -41,7 +69,7 @@
 
             &-sumbit {
                 width: 170px;
-                padding: 17px 32px;
+                padding: 17px 31px;
                 background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
                 border: none;
                 border-radius: 50px;
@@ -55,8 +83,10 @@
                 border-radius: 50px;
                 transition: 0.3s;
 
-                &:hover {
-                    transform: scale(1.05, 1.05);
+                @include media(576) {
+                    width: 140px;
+                    font-size: 16px;
+                    padding: 10px 20px;
                 }
             }
         }

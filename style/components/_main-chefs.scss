@@ -7,6 +7,7 @@
         @include media(768) {
             display: flex;
             flex-direction: column;
+            margin-block: 80px 40px;
         }
 
         &_texts {

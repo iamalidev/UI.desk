@@ -5,17 +5,37 @@
         padding-block: 114px 174px;
         @include flexbetween;
 
+        @include media(576) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 50px;
+        }
+
         &_first {
             width: 262px;
             display: flex;
             flex-direction: column;
             gap: 34px;
 
+            @include media(768) {
+                width: 200px;
+                gap: 17px;
+            }
+
             &-title {
                 font-weight: 500;
                 font-size: 26px;
                 line-height: 32px;
                 color: $footertitle;
+
+                @include media(768) {
+                    font-size: 21px;
+                }
+
+                @include media(576) {
+                    text-align: center;
+                }
             }
 
             &-text {
@@ -23,6 +43,15 @@
                 font-size: 16px;
                 line-height: 20px;
                 color: $footertext;
+
+                @include media(768) {
+                    font-size: 11px;
+                    line-height: 16px;
+
+                    @include media(576) {
+                        text-align: center;
+                    }
+                }
             }
         }
 
@@ -40,6 +69,14 @@
                 line-height: 28px;
                 color: $footertitle;
                 margin-bottom: 8px;
+
+                @include media(768) {
+                    font-size: 21px;
+                }
+
+                @include media(576) {
+                    text-align: center;
+                }
             }
 
             &-text {
@@ -47,6 +84,15 @@
                 font-size: 16px;
                 line-height: 20px;
                 color: $footertext;
+
+                @include media(768) {
+                    font-size: 11px;
+                    line-height: 16px;
+                }
+
+                @include media(576) {
+                    text-align: center;
+                }
             }
         }
     }
@@ -62,6 +108,11 @@
             font-size: 16px;
             line-height: 20px;
             color: $white;
+
+            @include media(576) {
+                font-size: 11px;
+            }
         }
     }
 }
+

@@ -80,25 +80,30 @@ body {
   max-width: 700px;
   width: 100%;
   display: flex;
-  column-gap: 160px;
+  -moz-column-gap: 160px;
+       column-gap: 160px;
 }
 @media only screen and (max-width: 1120px) {
   .header-top_section {
-    column-gap: 80px;
+    -moz-column-gap: 80px;
+         column-gap: 80px;
   }
 }
 @media only screen and (max-width: 984px) {
   .header-top_section {
-    column-gap: 15px;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
   }
 }
 .header-top_section__menu {
   display: flex;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }
 @media only screen and (max-width: 984px) {
   .header-top_section__menu {
-    column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -774,6 +779,7 @@ body {
   align-items: center;
 }
 .main-info_section-notepad_img, .main-info_section-map_img, .main-info_section-leaf_img {
+  width: -moz-max-content;
   width: max-content;
   height: 100px;
 }
@@ -997,6 +1003,7 @@ body {
   }
 }
 .main-aboutus_texts-btn {
+  width: -moz-max-content;
   width: max-content;
   font-weight: 400;
   font-size: 24px;
@@ -1260,6 +1267,7 @@ body {
   }
 }
 .main-freshvegs_texts-btn {
+  width: -moz-max-content;
   width: max-content;
   font-weight: 400;
   font-size: 24px;
@@ -1321,7 +1329,6 @@ body {
   .main-chefs {
     display: flex;
     flex-direction: column;
-    margin-block: 80px 40px;
   }
 }
 .main-chefs_texts {
@@ -1507,11 +1514,6 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 200px;
-}
-@media only screen and (max-width: 650px) {
-  .main-dishes {
-    margin-bottom: 100px;
-  }
 }
 .main-dishes_title {
   font-weight: 500;
@@ -1703,6 +1705,7 @@ body {
   transition: 1s;
 }
 .main-dishes_btn {
+  width: -moz-max-content;
   width: max-content;
   font-weight: 400;
   font-size: 24px;
@@ -1754,14 +1757,6 @@ body {
   margin-block: 120px;
   background-color: #FCFCFC;
 }
-@media only screen and (max-width: 650px) {
-  .main-clients {
-    padding: 0;
-    padding-bottom: 30px;
-    background-color: red;
-    margin-block: 0;
-  }
-}
 .main-clients_title {
   font-weight: 500;
   font-size: 54px;
@@ -1770,33 +1765,27 @@ body {
   color: #151414;
   margin-bottom: 47px;
 }
-@media only screen and (max-width: 1350px) {
-  .main-clients_title {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-}
 .main-clients_swiper {
-  width: 1053px !important;
+  width: 1083px !important;
   height: 400px !important;
   background-color: fcfcfc;
 }
 @media only screen and (max-width: 1350px) {
   .main-clients_swiper {
-    width: 795px !important;
+    width: 825px !important;
     height: 300px !important;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .main-clients_swiper {
+    width: 420px !important;
+    height: 560px !important;
   }
 }
 @media only screen and (max-width: 1100px) {
-  .main-clients_swiper {
-    width: 385px !important;
-    height: 300px !important;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .main-clients_swiper {
-    width: 290px !important;
-    height: 290px !important;
+  .main-clients_swiper-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 }
 .main-clients_swiper-wrapper_slide {
@@ -1804,8 +1793,10 @@ body {
   width: 100% !important;
   height: 347px !important;
   background: #FFFFFF;
-  border: 1px solid #e6e6e6;
+  border: 2px solid #FFFFFF;
+  box-shadow: 1px 1px 10px rgba(120, 125, 173, 0.06);
   border-radius: 8px;
+  margin: 10px;
   padding: 37px 22px 64px 25px;
 }
 @media only screen and (max-width: 1350px) {
@@ -1813,12 +1804,6 @@ body {
     max-width: 385px !important;
     height: 260px !important;
     padding: 18px 11px 32px 12px;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .main-clients_swiper-wrapper_slide {
-    max-width: 290px !important;
-    height: 290px !important;
   }
 }
 .main-clients_swiper-wrapper_slide-top {
@@ -1895,29 +1880,19 @@ body {
     line-height: 26px;
   }
 }
-@media only screen and (max-width: 650px) {
-  .main-clients_swiper-wrapper_slide-text {
-    text-align: justify;
-  }
-}
 .main-clients_nav {
   width: 105px;
   position: absolute;
-  left: 47.3%;
+  left: 47%;
 }
 @media only screen and (max-width: 1350px) {
   .main-clients_nav {
-    left: 46.3%;
+    left: 46%;
   }
 }
 @media only screen and (max-width: 1100px) {
   .main-clients_nav {
-    left: 45.3%;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .main-clients_nav {
-    display: none;
+    transform: rotate(90deg);
   }
 }
 .main-clients_nav-next::after, .main-clients_nav-prev::after {

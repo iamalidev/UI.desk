@@ -5,6 +5,10 @@
         align-items: center;
         margin-bottom: 200px;
 
+        @include media(650) {
+            margin-bottom: 100px;
+        }
+
         &_title {
             font-weight: 500;
             font-size: 54px;

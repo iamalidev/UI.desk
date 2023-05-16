@@ -122,7 +122,7 @@ new typing({
 
 
 const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 25,
     freeMode: true,
 
