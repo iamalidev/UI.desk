@@ -7,8 +7,6 @@
         @include media(650) {
             padding: 0;
             padding-bottom: 30px;
-            // border: 1px solid black;
-            background-color: red;
             margin-block: 0;
         }
 
@@ -30,7 +28,6 @@
             width: 1053px !important;
             height: 400px !important;
             background-color: fcfcfc;
-            // border: 1px solid black;
 
             @include media(1350) {
                 width: 795px !important;
@@ -45,7 +42,6 @@
             @include media(650) {
                 width: 290px !important;
                 height: 290px !important;
-                // background-color: red;
             }
 
             &-wrapper {
@@ -56,7 +52,6 @@
                     height: 347px !important;
                     background: #FFFFFF;
                     border: 1px solid #e6e6e6;
-                    // box-shadow: 1px 1px 10px rgba(120, 125, 173, 0.06);
                     border-radius: 8px;
                     padding: 37px 22px 64px 25px;
                     
@@ -69,7 +64,6 @@
                     @include media(650) {
                         max-width: 290px !important;
                         height: 290px !important;
-                        // padding: 18px 11px 32px 12px;
                     }
 
                     &-top {
